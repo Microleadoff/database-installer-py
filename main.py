@@ -3,8 +3,8 @@ import mysql.connector
 connection_params = {
     'host': "localhost",
     'user': "",
-    'port': 8889,
-    'password': "root",
+    'password': "",
+    'port': 3306,
 }
 
 host = input("renseignez le host (si différent de localhost) : ")
@@ -18,10 +18,6 @@ if user != "":
 password = input("renseignez le password : ")
 if password != "":
     connection_params["password"] = password
-
-database = input("renseignez le database : ")
-if database != "":
-    connection_params["database"] = database
 
 port = input("renseignez le port (si différent de 3306) : ")
 if port != "":
