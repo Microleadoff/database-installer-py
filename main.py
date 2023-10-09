@@ -41,7 +41,7 @@ if (choice == "1"):
 if (choice == "2"):
     db_name = "world"
 
-with open(db_name + '.sql', encoding="utf-8") as f:
+with open('./databases/' + db_name + '.sql', encoding="utf-8") as f:
     query = ""
     for line in f:
         if((line[0:2] != "--") and line[0] != "\n"):
