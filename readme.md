@@ -4,7 +4,8 @@ This is a python script made to initialize databases for practicing SQL.
 
 ## Installation
 
-Unzip all databases in the databases folder. Make sure all files have the same name as the zip files, but with the .sql extension.
+- Unzip all databases in the databases folder. Make sure all files have the same name as the zip files, but with the .sql extension.
+- install mysql.connector : ```pip install mysql-connector-python```
 
 ## Execution
 
