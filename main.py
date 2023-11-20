@@ -26,6 +26,8 @@ if port != "":
 print("Quelle base de données souhaitez vous installer ?")
 print("1 - Employées")
 print("2 - World")
+print("3 - Chinook")
+print("4 - Sakila")
 choice = input()
 
 mydb = mysql.connector.connect(**connection_params)
@@ -36,6 +38,10 @@ if (choice == "1"):
     db_name = "employees"
 if (choice == "2"):
     db_name = "world"
+if (choice == "3"):
+    db_name = "chinook"
+if (choice == "4"):
+    db_name = "sakila"
 
 with open('./databases/' + db_name + '.sql', encoding="utf-8") as f:
     query = ""
@@ -46,4 +52,3 @@ with open('./databases/' + db_name + '.sql', encoding="utf-8") as f:
                 mycursor.execute(query, multi=True)
                 mydb.commit()
                 query = ""
-
